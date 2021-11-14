@@ -2,6 +2,18 @@
 
 when trying to use `unified` within a `yarn2` project it does throw an error because is trying to import a node dependency that is not listed in the project:
 
+## Reproduction
+
+```bash
+git clone ...
+yarn
+yarn dev
+```
+
+this is using `PnP`. This only works if the `nodeLinker` is set to `node-modules`.
+
+## Error after running `yarn dev`:
+
 ```bash
 ➜ yarn dev
 Pre-bundling dependencies:
